@@ -28,10 +28,36 @@ pub async fn get_loader_versions(loader: &str) -> crate::Result<Manifest> {
         &state.pool,
         &state.api_semaphore,
     )
-    .await?
-    .ok_or_else(|| {
-        crate::ErrorKind::NoValueFor(format!("{} loader versions", loader))
-    })?;
+    .await;
+
+    let loaders = match loaders {
+        Ok(Some(loaders)) => loaders,
+        Ok(None) if loader == "quilt" => {
+            tracing::warn!(
+                "Quilt loader metadata is unavailable; skipping optional metadata"
+            );
+            return Ok(Manifest {
+                game_versions: Vec::new(),
+            });
+        }
+        Err(error) if loader == "quilt" => {
+            tracing::warn!(
+                error = %error,
+                "Unable to fetch Quilt loader metadata; skipping optional metadata"
+            );
+            return Ok(Manifest {
+                game_versions: Vec::new(),
+            });
+        }
+        Ok(None) => {
+            return Err(crate::ErrorKind::NoValueFor(format!(
+                "{} loader versions",
+                loader
+            ))
+            .into());
+        }
+        Err(error) => return Err(error),
+    };
 
     Ok(loaders.manifest)
 }
