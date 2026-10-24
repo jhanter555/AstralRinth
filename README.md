@@ -1,4 +1,4 @@
-# JhRinth
+# My AstralRinth
 
 A fork of AstralRinth (Modrinth launcher fork) — a Minecraft launcher with support for offline authentication.
 
