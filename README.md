@@ -4,12 +4,15 @@ A fork of AstralRinth (Modrinth launcher fork) — a Minecraft launcher with sup
 
 ## Releases
 
-**Available formats:**
-- `.msi` — Windows
-- `.dmg` — macOS
-- `.deb` — Linux
+Release builds are produced by GitHub Actions for these platforms:
 
-**Link:** https://github.com/jhanter555/JhRinth/releases
+- **Linux:** `.AppImage` and `.deb`
+- **Windows:** `.exe` installer and `.msi`
+- **macOS:** universal `.dmg`
+
+Push a `v*` or `build*` tag to build all three platforms and publish the artifacts to a GitHub Release. You can also start a build manually from the Actions tab; manual builds upload downloadable workflow artifacts but do not publish a release.
+
+**Releases:** https://github.com/jhanter555/AstralRinth/releases
 
 ## Features
 
@@ -24,6 +27,6 @@ A fork of AstralRinth (Modrinth launcher fork) — a Minecraft launcher with sup
 - Support for both licensed and offline accounts.
 
 ## Purpose
-AstralRinth was taken down, and the "proxy" repo containing it is using old Release page. 
-I made this repo not to claim the authorship or smth like that, but to fix a bug in the launcher that I experienced and to not make yall compile launcher from source.
-well this shit will never be seen by anyone, so why am i being so formal lmao
+
+AstralRinth was taken down, and the "proxy" repo containing it is using an old Releases page.
+I made this repo not to claim the authorship or anything like that, but to fix a bug in the launcher that I experienced and to save people from compiling the launcher from source.
