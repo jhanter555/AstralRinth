@@ -24,6 +24,6 @@ A fork of AstralRinth (Modrinth launcher fork) — a Minecraft launcher with sup
 - Support for both licensed and offline accounts.
 
 ## Purpose
-AstralRinth was taken down, and the repo containing it is using old Release page. 
+AstralRinth was taken down, and the "proxy" repo containing it is using old Release page. 
 I made this repo not to claim the authorship or smth like that, but to fix a bug in the launcher that I experienced and to not make yall compile launcher from source.
 well this shit will never be seen by anyone, so why am i being so formal lmao
