@@ -5,8 +5,8 @@ A fork of AstralRinth (Modrinth launcher fork) — a Minecraft launcher with sup
 ## Releases
 
 Release builds are produced by GitHub Actions for these platforms:
-
-- **Linux:** `.AppImage` and `.deb`
+- **Architectury: amd64**
+- **Linux:** `.AppImage`, `.deb`, `.rpm`, compiled ELF-64 bit executable.
 - **Windows:** `.exe` installer and `.msi`
 - **macOS:** universal `.dmg`
 
